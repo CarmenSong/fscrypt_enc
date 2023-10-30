@@ -1,0 +1,20 @@
+test: (g=0): rw=write, bs=(R) 1024KiB-1024KiB, (W) 1024KiB-1024KiB, (T) 1024KiB-1024KiB, ioengine=sync, iodepth=64
+fio-3.30
+Starting 1 process
+
+test: (groupid=0, jobs=1): err= 0: pid=1089: Fri Mar  9 14:43:35 2018
+  write: IOPS=157, BW=157MiB/s (165MB/s)(3141MiB/20002msec); 0 zone resets
+    clat (usec): min=1999, max=9794, avg=3878.06, stdev=338.93
+     lat (usec): min=2014, max=9889, avg=3932.46, stdev=341.87
+   bw (  KiB/s): min=151855, max=163840, per=100.00%, avg=161159.87, stdev=2659.98, samples=39
+   iops        : min=  148, max=  160, avg=157.23, stdev= 2.60, samples=39
+  lat (msec)   : 2=0.03%, 4=72.78%, 10=27.19%
+  cpu          : usr=1.28%, sys=92.12%, ctx=5605, majf=0, minf=40
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,3141,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+  WRITE: bw=157MiB/s (165MB/s), 157MiB/s-157MiB/s (165MB/s-165MB/s), io=3141MiB (3294MB), run=20002-20002msec
